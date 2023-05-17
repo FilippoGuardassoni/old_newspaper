@@ -1,6 +1,6 @@
 ![](https://github.com/FilippoGuardassoni/old_newspaper/blob/main/04.jpg)
 
-# Frequent Pattern Mining of Old Newspaper using Apriori Algorithm
+# Frequent Pattern Mining of Old Newspapers using Apriori Algorithm
 
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/pragyy/datascience-readme-template?include_prereleases)
 ![GitHub last commit](https://img.shields.io/github/last-commit/FilippoGuardassoni/old_newspaper)
@@ -15,22 +15,17 @@ Frequent Itemset Mining (FIM) is one of popular data mining technique with frequ
 
 # Installation and Setup
 
-In this section, provide detailed instructions on how to set up the project on a local machine. This includes any necessary dependencies, software requirements, and installation steps. Make sure to include clear and concise instructions so that others can easily replicate your setup.
+- Google Collab Instance
 
-I like to structure it as below - 
 ## Codes and Resources Used
-In this section I give user the necessary information about the software requirements.
-- **Editor Used:**  Informing the user of the editor used to produce the project.
-- **Python Version:** Informing the user of the version of python used for this project. If you are using some other language such as R, you can mention that as well.
+- Python 2.7 and up
+- PySpark
 
 ## Python Packages Used
-In this section, I include all the necessary dependencies needed to reproduce the project, so that the reader can install them before replicating the project. I categorize the long list of packages used as - 
 - **General Purpose:** General purpose packages like `urllib, os, request`, and many more.
 - **Data Manipulation:** Packages used for handling and importing dataset such as `pandas, numpy` and others.
 - **Data Visualization:** Include packages which were used to plot graphs in the analysis or for understanding the ML modelling such as `seaborn, matplotlib` and others.
 - **Machine Learning:** This includes packages that were used to generate the ML model such as `scikit, tensorflow`, etc.
-
-The level of granularity you want to provide for the above list is entirely up to you. You can also add a few more levels, such as those for statistical analysis or data preparation, or you can simply incorporate them into the above list as is.
 
 # Data
 
