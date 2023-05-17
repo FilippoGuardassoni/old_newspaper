@@ -1,4 +1,4 @@
-![](https://github.com/pragyy/datascience-readme-template/blob/main/Headerheader.jpg)
+![](https://github.com/FilippoGuardassoni/old_newspaper/04.jpg)
 
 # Frequent Pattern Mining of Old Newspaper using Apriori Algorithm
 
