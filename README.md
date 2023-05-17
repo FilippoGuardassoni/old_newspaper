@@ -1,4 +1,4 @@
-![](https://github.com/FilippoGuardassoni/old_newspaper/blob/main/.jpg)
+![](https://github.com/FilippoGuardassoni/old_newspaper/blob/main/04.jpg)
 
 # Frequent Pattern Mining of Old Newspaper using Apriori Algorithm
 
