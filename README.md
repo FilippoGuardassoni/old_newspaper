@@ -5,7 +5,7 @@
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/pragyy/datascience-readme-template?include_prereleases)
 ![GitHub last commit](https://img.shields.io/github/last-commit/FilippoGuardassoni/old_newspaper)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/FilippoGuardassoni/old_newspaper)
-![GitHub](https://img.shields.io/github/license/FilippoGuardassoni/old_newspaper/LICENSE.txt)
+![GitHub](https://img.shields.io/github/license/FilippoGuardassoni/old_newspaper)
 ![contributors](https://img.shields.io/github/contributors/FilippoGuardassoni/old_newspaper) 
 ![codesize](https://img.shields.io/github/languages/code-size/FilippoGuardassoni/old_newspaper)
 
