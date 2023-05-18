@@ -1,4 +1,4 @@
-![](https://github.com/FilippoGuardassoni/old_newspaper/blob/main/04.jpg)
+![](https://github.com/FilippoGuardassoni/old_newspaper/blob/main/headerheader.jpg)
 
 # Frequent Pattern Mining of Old Newspapers using Apriori Algorithm
 
@@ -15,7 +15,7 @@ Frequent Itemset Mining (FIM) is one of popular data mining technique with frequ
 
 # Installation and Setup
 
-- Google Collab Instance
+- Google Colab Instance
 
 ## Codes and Resources Used
 - Python 2.7 and up
@@ -29,56 +29,65 @@ Frequent Itemset Mining (FIM) is one of popular data mining technique with frequ
 
 # Data
 
-The very crucial part of any data science project is dataset. Therefore list all the data sources used in the project, including links to the original data, descriptions of the data, and any pre-processing steps that were taken.
+The Old_Newspaper dataset contains 16,806,041 records. It contains natural language text from various newspapers, social media posts and blog pages in multiple languages.
 
-I structure this as follows - 
+## Source Data & 
+The dataset is a subset taken from HC Corpora which is a collection of corpora for various language (66). It is an already cleaned version of the raw data from newspaper subset of the HC corpus. The dataset contains the following variables:
 
-## Source Data
-In this section, I list all of the data that was used, along with the source link and a few lines that describe each data. You can also explain each of the data attributes in greater detail if you wish.
+- Language: Language of the text.
+- Source: Newspaper from which the text is from.
+- Date: Date of the article that contains the text.
+- Text: Sentence/paragraph from the newspaper.
 
 ## Data Acquisition
-Data collection is not always as simple as downloading from Kaggle or any open source website; it can also be gathered through API calls or online scraping. So you can elaborate on this step in this section so that the reader can obtain the dataset by following your instructions.
+Data collection is as simple as downloading from Kaggle through its API in Google Colab.
 
 ## Data Preprocessing
-Acquired data is not always squeaky clean, so preprocessing them are an integral part of any data analysis. In this section you can talk about the same.
+This study is conducted on only English language. The other columns are disregarded. After filtering, the resulted dataset is composed by 1.010.242 rows:
 
-# Code structure
-Explain the code structure and how it is organized, including any significant files and their purposes. This will help others understand how to navigate your project and find specific components. 
+- Replace special characters and expand contractions
+- Split sentences
+- Remove punctuation, blank spaces and capitalization
+- Remove digits
+- Remove stop words
+- Lemmatization
+- Subsampling
 
-Here is the basic suggested skeleton for your data science repo (you can structure your repository as needed ):
+# Project structure
 
 ```bash
-├── data
-│   ├── data1.csv
-│   ├── data2.csv
-│   ├── cleanedData
-│   │   ├── cleaneddata1.csv
-|   |   └── cleaneddata2.csv
-├── data_acquisition.py
-├── data_preprocessing.ipynb
-├── data_analysis.ipynb
-├── data_modelling.ipynb
-├── Img
-│   ├── img1.png
-│   ├── Headerheader.jpg
-├── LICENSE
+├── code
+│   ├── spark_old_newspapers_market_basket_analysis.ipynb
+├── report
+│   ├── old_newspaper_report.pdf
+├── img
+│   ├── headerheader.jpg
 ├── README.md
-└── .gitignore
+└── .gitattributes,
 ```
 
 # Results and evaluation
-Provide an overview of the results of your project, including any relevant metrics and graphs. Include explanations of any evaluation methodologies and how they were used to assess the quality of the model. You can also make it appealing by including any pictures of your analysis or visualizations.
+After a great number of trials, the Apriori algorithm was considered too inefficient to run with the whole dataset. In fact, these actions were taken:
+
+1. Several values of minimum support and confidence were considered such as 0.01, 0.05, 0.001.
+2. The code was run for as long as 7 hours without a final output.
+3. Different best practices to optimize the code and the Spark environment were followed.
+
+Then, a subsample of the dataset was randomly created using n = 500. Min. Support is equal to 0.01. Finally, the confidence values are calculated and printed in a dataframe in descending order.
+
+<img width="201" alt="image" src="https://github.com/FilippoGuardassoni/old_newspaper/assets/85356795/800db652-9bc1-442b-8d56-bf105b75d1a8">
+
+Again, the same kind of steps highlighted above were followed in the implementation of the FP-Growth algorithm. Unlike Apriori, frequent itemsets and association rules were found. The association rule table above represent the patterns that can be discerned from the dataset.
+
+<img width="394" alt="image" src="https://github.com/FilippoGuardassoni/old_newspaper/assets/85356795/27303fd2-160e-433b-99bc-1c31b10318d0">
+
+In conclusion, FP-Growth algorithm has revealed to the more efficient to implement when limited resources are involved (even time) to analyze a very big dataset.
 
 # Future work
-Outline potential future work that can be done to extend the project or improve its functionality. This will help others understand the scope of your project and identify areas where they can contribute.
+The first step to improve this analysis would be to gather additional variables to create context for the analysis, and create a basket for each context. In this case, for example, the genre of the newspaper or even of the news itself. In this way, the patterns found could have more potential meaning. Apriori and FP-Growth were implemented in this analysis, however new ones are constantly being proposed and tested such as Eclat, PCY and YAFIM.
 
 # Acknowledgments/References
-Acknowledge any contributors, data sources, or other relevant parties who have contributed to the project. This is an excellent way to show your appreciation for those who have helped you along the way.
-
-For instance, I am referencing the image that I used for my readme header - 
-- Image by [rashadashurov](https://www.vectorstock.com/royalty-free-vector/data-science-cartoon-template-with-flat-elements-vector-27984292)
+See report/old_newspaper_report.pdf for references.
 
 # License
-Specify the license under which your code is released. Moreover, provide the licenses associated with the dataset you are using. This is important for others to know if they want to use or contribute to your project. 
-
 For this github repository, the License used is [MIT License](https://opensource.org/license/mit/).
