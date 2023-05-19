@@ -15,11 +15,10 @@ Frequent Itemset Mining (FIM) is one of popular data mining technique with frequ
 
 # Installation and Setup
 
-- Google Colab Instance
-
 ## Codes and Resources Used
 - Python 2.7 and up
 - PySpark
+- Google Colab Instance
 
 ## Python Packages Used
 - **General Purpose:** General purpose packages like `urllib, os, request`, and many more.
